@@ -10,12 +10,10 @@ import javax.persistence.*;
 @Entity
 @Table(name="pays")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 
 public class Pays {
-
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long Id ;
     @Column(unique = true, length = 20)

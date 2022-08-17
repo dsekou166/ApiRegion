@@ -17,13 +17,11 @@ public class PopulationServiceImpl implements PopulationService {
     @Autowired
    private final PopulationRepository populationRepository;
 
-
     @Override
     public Population creer(Population population) {
         // TODO Auto-generated method stub
         return populationRepository.save(population);
     }
-
     @Override
     public List<Population> lire() {
         // TODO Auto-generated method stub

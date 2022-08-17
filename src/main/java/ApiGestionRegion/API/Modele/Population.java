@@ -10,12 +10,10 @@ import javax.persistence.*;
 @Entity
 @Table(name="population")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
+
 public class Population {
 
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long Id ;
     private int chiffre;

@@ -21,12 +21,9 @@ public class PaysController {
 
     @ApiOperation(value = "Ajouter un pays")
     @PostMapping("/Creer")
-
-    public Object creer( Pays pays){
-
+    public Object creer(@RequestBody Pays pays){
         try{
             return paysService.creer(pays);
-
         }catch (Exception e){
             return Message.ErreurReponse(" le Pays "+pays.getNom()+" existe déjà", HttpStatus.OK,null);
         }
@@ -45,7 +42,6 @@ public class PaysController {
     @ApiOperation(value = "Modifier un peu")
     @PutMapping("/modifier/{Id}")
     public Pays Modifier(@PathVariable Long Id,Pays pays) {
-
         return paysService.modifier( Id,pays);
     }
 

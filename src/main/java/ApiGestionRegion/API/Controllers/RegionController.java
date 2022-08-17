@@ -24,7 +24,7 @@ public class RegionController {
     @ApiOperation(value = "Ajouter une region")
     @PostMapping("/creer")
 
-    public Object create( Region Region) {
+    public Object create(@RequestBody Region Region) {
 
         try {
             return RegionService.creer(Region);
@@ -48,7 +48,6 @@ public class RegionController {
         return RegionService.getRegionsP();
 
     }
-
      @ApiOperation(value = "Modifier une region")
     @PutMapping("/modifier/{Id}")
     public Region Modifier(@PathVariable Long Id, Region Region) {
@@ -58,7 +57,6 @@ public class RegionController {
     @ApiOperation(value = "Supprimer une region")
     @DeleteMapping("/delete/{Id}")
     public String delete(@PathVariable Long Id) {
-
         return RegionService.supprimer(Id);
     }
 

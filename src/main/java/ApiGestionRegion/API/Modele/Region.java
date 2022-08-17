@@ -8,11 +8,9 @@ import lombok.ToString;
 import javax.persistence.*;
 @Entity
 @Table(name="region")
-@Data @NoArgsConstructor
-@AllArgsConstructor
-@ToString
+@Data
 public class Region {
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long Id ;
     @Column(unique = true)

@@ -19,7 +19,7 @@ public class PopulationController {
 
     @ApiOperation(value = "Ajouter une population")
     @PostMapping("/creer")
-    public Population Creer( Population population) {
+    public Population Creer(@RequestBody Population population) {
         return PopulationService.creer(population);
     }
 
